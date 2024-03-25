@@ -278,7 +278,7 @@ L.DistortableCollection = L.FeatureGroup.extend({
           src: layer._image.src,
           width: layer._image.width,
           height: layer._image.height,
-          tooltipText: layer.getTooltipText(),
+          // tooltipText: layer.getTooltipText(),
           image_file_name: filename,
           nodes: corners,
           cm_per_pixel: L.ImageUtil.getCmPerPixel(layer),
