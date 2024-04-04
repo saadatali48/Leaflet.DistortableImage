@@ -1,12 +1,17 @@
 L.DragHandle = L.EditHandle.extend({
   options: {
     TYPE: 'drag',
-    icon: L.icon({
-      // eslint-disable-next-line max-len
-      iconUrl: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAsVJREFUeNrMVztLXEEUvnNVFAVBAhY2aRKbTZEHJNpYabuNjSgYg/GxdsmPSJkUAa/ZdVEX8mgWYVutbHxAHkVskjQBuUUgBISVhCQk3wnfwMlk1rusN1wHPubOzJlzvjlz5sxc01Ma/hUEwQnwDIjqc7uvgv9YYO86qgIwCXQbdNTlQ8kcCBHgBch8TcloF6oJGr6phk6EQAkfdz3zvgDr9Mr7Fg1fptEZoM8jsmrokpfsiIFO4IIjuE2v1EDmR4LRdlR5Gh51hj8D34ABtm8YTtqna0TgklIw5CgQguKxIojEjmFROg/MKQO27NkFAB+4wAPouGUJiIvWKHwbAxX2XyWRKWkqhT+pbJntJZJuUzISW0+5hW+obxrVBsfvoH/dqCCJuU97GBh2VteLSiYvArmErT8EVoAK9Bw7enbpVYmvAQlyowYforrH5jXL2rPHI/TKONDB7u9AlavdaTBPvPmazUeQuy8f7UomUgTEwIJPEQ3sQGE/6ll2l9H/KcEzBcfWn2IclluM3DpddJxSHujlFkscbUPvmB0LHVnLrId7nlaZVkEc6QGXQI1MAwZcWmVRHeNaQwJMMiU2cwy4s7p/RJ2ckpvIQs+cIs+5GzitloLKHUV3MPREuXbTOKO91dX387gGTONxIgEWm+E61FFrpcyqXLHsEwiDjEsjAksqw5XPoL9MHVrn6QR4q+XZrDaR4RoWzq2ymafuRA/Mq1stSsHLVkcbdf9VjOcx8ZH3+SFWcCWlVPyWuUBOwUWdC1wP5NVjYiXFWLO69PZ6CRTUY6KSIoEKdf6T3IzzgHxnsyHctNBEkmn6Oob8ExUDg/ahGybd177cDjzH5xHwgDiSvoS7I/LZyvxJZj0wod7tkX5G0XVC7rEyLhfLJjBGbKoLLEfZWObyKeZ6oY82g+yf5Zn/mJyHX7PMf04z/T3/LcAAu4E6iiyJqf0AAAAASUVORK5CYII=',
-      iconSize: [32, 32],
+    icon: L.divIcon({
+      className: 'distortable-image-div-icon',
       iconAnchor: [16, 16],
-    }),
+      html: `<div style="    width: 30px;
+      height: 30px;
+      background: rgb(78, 195, 142);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50px;"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" style="height: 20px; color: rgb(255, 255, 255);"><g id="drag-31" transform="translate(-1 -1)"><line id="Line_4646" data-name="Line 4646" y1="14" transform="translate(8.5 1.5)" fill="none" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></line><line id="Line_4647" data-name="Line 4647" x2="14" transform="translate(1.5 8.5)" fill="none" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></line><path id="Path_10600" data-name="Path 10600" d="M6.5,3.5l2-2,2,2" fill="none" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path><path id="Path_10601" data-name="Path 10601" d="M6.5,13.5l2,2,2-2" fill="none" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path><path id="Path_10602" data-name="Path 10602" d="M13.5,6.5l2,2-2,2" fill="none" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path><path id="Path_10603" data-name="Path 10603" d="M3.5,6.5l-2,2,2,2" fill="none" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path></g></svg></div>`,
+  }),
   },
 
   _onHandleDrag() {
@@ -25,3 +30,5 @@ L.DragHandle = L.EditHandle.extend({
 L.dragHandle = function(overlay, idx, options) {
   return new L.DragHandle(overlay, idx, options);
 };
+
+

@@ -8,7 +8,17 @@ let map;
     img = L.distortableImageOverlay('example.jpg', {
       selected: true,
       fullResolutionSrc: 'large.jpg',
+      actions:[  L.DragAction,
+        L.ScaleAction,
+        L.RotateAction,
+        L.OpacityAction,
+        L.OpacitiesAction,
+        L.LockAction,
+        L.StackAction,
+        L.RestoreAction,
+        L.DeleteAction,]
     }).addTo(map);
+    console.log(img);
   });
 })();
 
