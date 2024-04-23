@@ -118,7 +118,7 @@ L.DistortableImage.Edit = L.Handler.extend({
 
     this._scaleHandles = L.layerGroup();
     for (i = 0; i < 1; i++) {
-      this._scaleHandles.addLayer(L.scaleHandle(overlay, 1));
+      this._scaleHandles.addLayer(L.scaleHandle(overlay, 2));
     }
 
     this._distortHandles = L.layerGroup();
