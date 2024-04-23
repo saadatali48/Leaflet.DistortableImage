@@ -112,23 +112,23 @@ L.DistortableImage.Edit = L.Handler.extend({
     let i;
 
     this._dragHandles = L.layerGroup();
-    for (i = 0; i < 4; i++) {
-      this._dragHandles.addLayer(L.dragHandle(overlay, i));
+    for (i = 0; i < 1; i++) {
+      this._dragHandles.addLayer(L.dragHandle(overlay, 1));
     }
 
     this._scaleHandles = L.layerGroup();
-    for (i = 0; i < 4; i++) {
-      this._scaleHandles.addLayer(L.scaleHandle(overlay, i));
+    for (i = 0; i < 1; i++) {
+      this._scaleHandles.addLayer(L.scaleHandle(overlay, 1));
     }
 
     this._distortHandles = L.layerGroup();
     for (i = 0; i < 4; i++) {
-      this._distortHandles.addLayer(L.distortHandle(overlay, i));
+      this._distortHandles.addLayer(L.distortHandle(overlay, 1));
     }
 
     this._rotateHandles = L.layerGroup(); // individual rotate
-    for (i = 0; i < 4; i++) {
-      this._rotateHandles.addLayer(L.rotateHandle(overlay, i));
+    for (i = 0; i < 1; i++) {
+      this._rotateHandles.addLayer(L.rotateHandle(overlay, 2));
     }
 
     // handle includes rotate AND scale
