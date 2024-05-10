@@ -4,7 +4,7 @@ L.DragHandle = L.EditHandle.extend({
     icon: L.divIcon({
       className: 'distortable-image-div-icon',
       iconAnchor: [16, 16],
-      html: `<div style="    width: 30px;
+      html: `<div style="display:none !important;width: 30px;
       height: 30px;
       background: rgb(78, 195, 142);
       display: flex;
