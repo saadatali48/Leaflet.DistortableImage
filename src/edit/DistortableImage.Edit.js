@@ -112,7 +112,7 @@ L.DistortableImage.Edit = L.Handler.extend({
     let i;
 
     this._dragHandles = L.layerGroup();
-    for (i = 0; i < 1; i++) {
+    for (i = 0; i < 0; i++) {
       this._dragHandles.addLayer(L.dragHandle(overlay, 1));
     }
 
